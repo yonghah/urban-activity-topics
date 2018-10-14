@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8' />
+<title></title>
+<meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.50.0/mapbox-gl.js'></script>
+<link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.50.0/mapbox-gl.css' rel='stylesheet' />
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega@4"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega-lite@3.0.0-rc3"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega-embed@3"></script>
+<script src="https://d3js.org/d3.v4.min.js"></script>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<link rel="stylesheet" href="index.css">
+</head>
+<body>
+<div class='sidebar pad1'>
+    <div id='app'>
+        <h6> Time-Space Topics in Seoul</h6>
+        <select v-model="currentTopic" v-on:change='changeTopic'>
+            <option disabled value="dummy">Choose a topic</option>
+            <option v-for="topic in topics" v-bind:value="topic">
+                {{ topic }}
+            </option>
+        </select>
+        <div class="input-w">
+            <label for='maxScore'>Color Adjustment: {{maxScore}}</label>
+            <input id='maxScore' type='range' min="1" max="300"
+                v-model='maxScore'
+                v-on:input='changeMaxScore'/>
+        </div>
+        <div id="vis" v-on:click="greet"></div>
+    </div>
+</div>
+<div id='map' class='map pad2'></div>
+
+<svg class='topics' width="150" height="150"></svg>
+
+<script src="index.js"></script>
+</body>
+</html>
