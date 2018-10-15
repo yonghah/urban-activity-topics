@@ -18,18 +18,20 @@ var app = new Vue({
   data: {
     topics: Array.from({length: 15}, (x,i) => 'topic_' + i),
     currentTopic: 'topic_0',
-    maxScore: 100
+    scoreCut: 0.6,
+    maxScores: {"topic_0":3708,"topic_1":1075,"topic_2":933,"topic_3":600,"topic_4":908,"topic_5":2552,"topic_6":557,"topic_7":963,"topic_8":652,"topic_9":575,"topic_10":1219,"topic_11":572,"topic_12":1936,"topic_13":453,"topic_14":1239}
   },
   computed: {
     topicColor: function(){
+      var maxScore = this.maxScores[this.currentTopic] * this.scoreCut;
       return {
         'property': this.currentTopic,
         'stops': [
           [0, '#440154'],
-          [0.25 * Number(this.maxScore), '#3b518b'], 
-          [0.50 * Number(this.maxScore), '#21918d'],
-          [0.75 * Number(this.maxScore), '#61c960'],  
-          [Number(this.maxScore), '#cbe02d']
+          [0.25 * Number(maxScore), '#3b518b'], 
+          [0.50 * Number(maxScore), '#21918d'],
+          [0.75 * Number(maxScore), '#61c960'],  
+          [Number(maxScore), '#cbe02d']
         ]
       } 
     },
@@ -41,7 +43,7 @@ var app = new Vue({
         app.topicColor
       );
     },
-    changeMaxScore: function(e) {
+    changeScoreCut: function(e) {
       map.setPaintProperty(
         'census', 'fill-color',
         app.topicColor
@@ -60,9 +62,12 @@ var app = new Vue({
 map.addControl(new mapboxgl.NavigationControl());
 
 map.on('load', function() {
+  var vectorTileUrl = "https://s3.amazonaws.com/seoul-topics/tile/{z}/{x}/{y}.pbf";
   map.addSource('census', {
     type: 'vector',
-    url:'mapbox://ahgnoy.1a2xo2qt'
+    "tiles": [ vectorTileUrl],
+    "minzoom": 5,
+    "maxzoom": 18
   });
 
   map.addLayer({

@@ -9,6 +9,7 @@ body {
     position: fixed;
     top: 0;
     bottom: 0;
+    width:30%
 }
 .map {
     border-left: 1px solid #fff;

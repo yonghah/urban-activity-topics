@@ -17,7 +17,7 @@
 <body>
 <div class='sidebar pad1'>
     <div id='app'>
-        <h6> Time-Space Topics in Seoul</h6>
+        <h6> Urban Activity Topics in Seoul</h6>
         <select v-model="currentTopic" v-on:change='changeTopic'>
             <option disabled value="dummy">Choose a topic</option>
             <option v-for="topic in topics" v-bind:value="topic">
@@ -25,10 +25,10 @@
             </option>
         </select>
         <div class="input-w">
-            <label for='maxScore'>Color Adjustment: {{maxScore}}</label>
-            <input id='maxScore' type='range' min="1" max="300"
-                v-model='maxScore'
-                v-on:input='changeMaxScore'/>
+            <label for='scoreCut'>Color Adjustment: {{scoreCut}}</label>
+            <input id='scoreCut' type='range' min="0" max="1" step="0.1"
+                v-model='scoreCut'
+                v-on:input='changeScoreCut'/>
         </div>
         <div id="vis" v-on:click="greet"></div>
     </div>
