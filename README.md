@@ -3,9 +3,10 @@ urban activity topics
 
 NNF topic model with hourly population data
 
-Notebook:
+* Notebook:
 https://github.com/yonghah/urban-activity-topics/blob/master/notebooks/UrbanActivityTopics.ipynb
-Web app:
+
+* Web app:
 https://s3.amazonaws.com/seoul-topics/www/index.html
 
 
