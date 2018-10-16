@@ -18,8 +18,8 @@ var app = new Vue({
   data: {
     topics: Array.from({length: 15}, (x,i) => 'topic_' + i),
     currentTopic: 'topic_0',
-    scoreCut: 0.6,
-    maxScores: {"topic_0":3708,"topic_1":1075,"topic_2":933,"topic_3":600,"topic_4":908,"topic_5":2552,"topic_6":557,"topic_7":963,"topic_8":652,"topic_9":575,"topic_10":1219,"topic_11":572,"topic_12":1936,"topic_13":453,"topic_14":1239}
+    scoreCut: 1.0,
+    maxScores: {"topic_0":0.9718522162,"topic_1":0.9866239885,"topic_2":0.951059973,"topic_3":0.8887156619,"topic_4":0.8163271901,"topic_5":0.9724691302,"topic_6":0.463504019,"topic_7":0.7101315165,"topic_8":0.8556915534,"topic_9":0.6162096342,"topic_10":0.9179109952,"topic_11":0.875136506,"topic_12":0.981917131,"topic_13":0.5738386082,"topic_14":0.7383929433,"census":"1125074033301"}
   },
   computed: {
     topicColor: function(){
@@ -77,7 +77,7 @@ map.on('load', function() {
     "source-layer": 'censustopic',
     'paint': {
       'fill-color': app.topicColor,
-      'fill-opacity': 0.5,
+      'fill-opacity': 0.75,
       'fill-outline-color':  'rgba(0, 0, 0, 0.3)'
     }
   });
