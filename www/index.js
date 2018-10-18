@@ -16,10 +16,10 @@ var map = new mapboxgl.Map({
 var app = new Vue({
   el: '#app',
   data: {
-    topics: Array.from({length: 15}, (x,i) => 'topic_' + i),
+    topics: Array.from({length: 12}, (x,i) => 'topic_' + i),
     currentTopic: 'topic_0',
     scoreCut: 1.0,
-    maxScores: {"topic_0":0.9718522162,"topic_1":0.9866239885,"topic_2":0.951059973,"topic_3":0.8887156619,"topic_4":0.8163271901,"topic_5":0.9724691302,"topic_6":0.463504019,"topic_7":0.7101315165,"topic_8":0.8556915534,"topic_9":0.6162096342,"topic_10":0.9179109952,"topic_11":0.875136506,"topic_12":0.981917131,"topic_13":0.5738386082,"topic_14":0.7383929433,"census":"1125074033301"}
+    maxScores: {"topic_0":0.9943492393,"topic_1":0.9918785849,"topic_2":0.9661029279,"topic_3":0.9750761776,"topic_4":0.8267151792,"topic_5":0.9776842157,"topic_6":0.4393191338,"topic_7":0.9576359052,"topic_8":0.89564641,"topic_9":0.5724851274,"topic_10":0.6931789802,"topic_11":0.8765073608}
   },
   computed: {
     topicColor: function(){
