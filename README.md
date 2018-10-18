@@ -3,6 +3,8 @@ urban activity topics
 
 NNF topic model with hourly population data
 
+![](https://github.com/yonghah/urban-activity-topics/blob/master/reports/figures/topics.svg)
+
 * Notebook:
 https://github.com/yonghah/urban-activity-topics/blob/master/notebooks/UrbanActivityTopics.ipynb
 
