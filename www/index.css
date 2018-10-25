@@ -9,22 +9,21 @@ body {
     position: fixed;
     top: 0;
     bottom: 0;
-    width:30%
+    width:320px
 }
 .map {
     border-left: 1px solid #fff;
     position: absolute;
-    left: 30%;
-    width: 70%;
+    left: 320px;
+    right: 0;
     top: 0;
     bottom: 0;
 }
 .topics {
     position: absolute;
-    left: 30%;
+    left: 320px;
     top:0px;
-    /* background:lightgray; */
-    opacity:0.8;
+    background:rgba(200,200,200,0.6);
 }
 .pad1 {
     padding: 10px;
