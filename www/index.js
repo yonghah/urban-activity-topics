@@ -16,10 +16,10 @@ var map = new mapboxgl.Map({
 var app = new Vue({
   el: '#app',
   data: {
-    topics: Array.from({length: 12}, (x,i) => 'topic_' + i),
+    topics: Array.from({length: 15}, (x,i) => 'topic_' + i),
     currentTopic: 'topic_0',
     scoreCut: 1.0,
-    maxScores: {"topic_0":0.9943492393,"topic_1":0.9918785849,"topic_2":0.9661029279,"topic_3":0.9750761776,"topic_4":0.8267151792,"topic_5":0.9776842157,"topic_6":0.4393191338,"topic_7":0.9576359052,"topic_8":0.89564641,"topic_9":0.5724851274,"topic_10":0.6931789802,"topic_11":0.8765073608}
+    maxScores: {"topic_0":0.9617289532,"topic_1":0.9936660192,"topic_2":0.9582582954,"topic_3":0.9244264603,"topic_4":0.7634331003,"topic_5":0.3669040362,"topic_6":0.882861761,"topic_7":0.366777168,"topic_8":0.9454749465,"topic_9":0.7852910221,"topic_10":0.8959908057,"topic_11":0.7249125909,"topic_12":0.4262215718,"topic_13":0.6373642553,"topic_14":0.9449404126}
   },
   computed: {
     topicColor: function(){
@@ -188,5 +188,5 @@ function getTitle(feature) {
   var properties = feature.properties;
   var census_id = properties['census']
   var adm_name = properties['ADM_NM']
-  return "#" + census_id + " (" + adm_name + ")";
+  return "#" + census_id;
 }
