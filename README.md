@@ -15,18 +15,22 @@ We were able to identify well-clustered activity topics repetitively found acros
 
 ### data collection
 Zipped csv from the City of Seoul collected with Beautiful Soup and saved to AWS S3 after cleaning up
+
 https://github.com/yonghah/urban-activity-topics/blob/master/notebooks/xPopData2S3.ipynb
 
 ### data aggretation
 aggregates the csvs in S3 using AWS Athena grouping by date, hour, census_id
+
 https://github.com/yonghah/urban-activity-topics/blob/master/notebooks/DataAggregateInAthena.ipynb
 
 ### topic modeling
 topic model with NMF from scikit-learn
+
 https://github.com/yonghah/urban-activity-topics/blob/master/notebooks/UrbanActivityTopicsNMF.ipynb
 
 ## Web app
 Mapbox GL JS, Vue.js, D3.js, and vega.
+
 https://s3.amazonaws.com/seoul-topics/www/index.html
 
 
