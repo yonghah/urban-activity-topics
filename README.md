@@ -12,7 +12,7 @@ We were able to identify well-clustered activity topics repetitively found acros
 ![](https://github.com/yonghah/urban-activity-topics/blob/master/reports/figures/topics.svg)
 
 * Notebook:
-https://github.com/yonghah/urban-activity-topics/blob/master/notebooks/UrbanActivityTopics.ipynb
+https://github.com/yonghah/urban-activity-topics/blob/master/notebooks/UrbanActivityTopicsNMF.ipynb
 
 * Web app:
 https://s3.amazonaws.com/seoul-topics/www/index.html
