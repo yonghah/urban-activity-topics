@@ -52,7 +52,7 @@ cx-Oracle==5.2.1
 cycler==0.10.0
 Cython==0.28.2
 cytoolz==0.9.0.1
-dask==0.17.2
+dask==2021.10.0
 datashader==0.6.5
 datashape==0.5.4
 decorator==4.3.0
