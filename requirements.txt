@@ -46,7 +46,7 @@ conda-build==3.8.1
 conda-verify==2.0.0
 configobj==5.0.6
 contextlib2==0.5.5
-cookiecutter==1.6.0
+cookiecutter==2.1.1
 cryptography==2.2.1
 cx-Oracle==5.2.1
 cycler==0.10.0
