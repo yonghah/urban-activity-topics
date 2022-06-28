@@ -8,7 +8,7 @@ anaconda-project==0.8.2
 appnope==0.1.0
 appscript==1.0.1
 argcomplete==1.8.2
-arrow==0.12.0
+arrow==0.15.1
 asn1crypto==0.24.0
 astroid==1.6.3
 astropy==3.0.1
