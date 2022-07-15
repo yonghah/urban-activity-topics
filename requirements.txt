@@ -58,7 +58,7 @@ datashape==0.5.4
 decorator==4.3.0
 descartes==1.1.0
 dill==0.2.7.1
-distributed==1.21.6
+distributed==2021.10.0
 docutils==0.14
 dynd==0.7.3.dev1
 entrypoints==0.2.3
